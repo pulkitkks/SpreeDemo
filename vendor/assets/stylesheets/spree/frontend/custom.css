@@ -1,0 +1,20 @@
+.list-group{
+	display:none;
+}
+.btn-primary{
+	display: none;
+	background: none;
+	border: 1.3px solid black;
+	color: black; 
+	transition: background 0.5s;
+}
+.btn-primary:hover{
+	background: black;
+}
+h4.taxonomy-root,h4.filter-title{
+	color: rgba(8, 10, 28, 0.6);
+	font-size: 1.4rem;
+}
+.line{
+	border: 1px solid rgba(8, 10, 28, 0.3);
+}

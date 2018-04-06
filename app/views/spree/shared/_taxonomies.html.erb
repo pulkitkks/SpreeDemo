@@ -6,6 +6,7 @@
       <% if taxonomy.root.children.any? %>
         <h4 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name) %></h4>
         <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+        <div class="line"></div>
       <% end %>
     <% end %>
   <% end %>

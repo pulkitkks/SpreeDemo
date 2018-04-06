@@ -6,6 +6,7 @@
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
     <%= render partial: 'spree/shared/google_analytics.js' %>
@@ -26,5 +27,26 @@
         <%= yield :templates %>
       </div>
     </div>
+   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+       document.querySelectorAll(".taxonomy-root").forEach(function(element){
+          element.addEventListener("click",function(){
+          // this.children.classList.add("abcd");
+          $(this).next().slideToggle();
+
+             });
+        });
+       document.querySelectorAll(".filter-title").forEach(function(element){
+          element.addEventListener("click",function(){
+          // this.children.classList.add("abcd");
+            $(this).next().slideToggle();
+            $(".btn-primary").slideToggle();
+          });
+        });
+
+  </script>
+  <!-- <script type="text/javascript" src="app/assets/javascripts/custom.js"></script> -->
   </body>
 </html>
