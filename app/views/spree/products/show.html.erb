@@ -32,6 +32,7 @@
     <div class="col-md-8 col-sm-7" data-hook="product_right_part">
       <div data-hook="product_right_part_wrap">
         <div id="product-description" data-hook="product_description">
+         
           <h1 class="product-title" itemprop="name"><%= @product.name %></h1>
 
           <div class="well" itemprop="description" data-hook="description">
@@ -46,6 +47,16 @@
         <div id="taxon-crumbs" class=" five " data-hook="product_taxons">
           <%= render partial: 'taxons' %>
         </div>
+        <ul>
+          <h3>Related Products</h3>
+<% @product.relations.each do |relation| %>
+   <% related_product = Spree::Product.find_by_id( relation.related_to_id )%>
+     <li class="related-product">
+       <%= link_to small_image(related_product), product_path(
+related_product) %>
+     </li>
+   <% end %>
+</ul>
       </div>
     </div>
   </div>
