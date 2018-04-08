@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/spree-contrib/spree_related_products.git
+  revision: c34b8853a1b165e86d3f100a1b3c093758fe9977
+  specs:
+    spree_related_products (3.3.0)
+      spree_backend (>= 3.1.0, < 4.0)
+      spree_extension
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -373,6 +381,7 @@ DEPENDENCIES
   spree (~> 3.4.4)
   spree_auth_devise (~> 3.3)
   spree_gateway (~> 3.3)
+  spree_related_products!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
